@@ -78,6 +78,11 @@ public class BusControler {
 		return busRepo.findAll();
 	}
 	//Update xe
+	@GetMapping("/test")
+	public String check()
+	{
+		return "Xin chafo deploy thanh cong";
+	}
 	@PutMapping("/updateBus")
 	public String updateBus(@RequestBody Bus bus) {
 		return busRepo.update(bus);
