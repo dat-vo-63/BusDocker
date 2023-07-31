@@ -1,0 +1,33 @@
+
+##---------------------------------
+version: '3'
+services:
+#  oracle-container:
+#    image: doctorkirk/oracle-19c
+#    container_name: oracle-19
+#    ports:
+#      - "1523:1521"
+#      - "5502:5500"
+#    environment:
+#      - ORACLE_PWD=123
+#      - ORACLE_SID=ORCLCDB
+#      - ORACLE_MEM=2000
+#      - ORACLE_PDB=ORCLPDB1
+#    networks:
+#      - test
+##Spring
+  spring-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pedantic_elgamal
+#    depends_on:
+#      - oracle-container
+    ports:
+      - "9091:9090"
+    networks:
+      - test
+
+networks:
+  test:
+    external: true
