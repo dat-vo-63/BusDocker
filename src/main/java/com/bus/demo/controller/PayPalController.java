@@ -1,6 +1,5 @@
 package com.bus.demo.controller;
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;
@@ -17,7 +16,7 @@ import org.json.*;
 import java.util.*;
 
 @RestController
-@CrossOrigin (value = "*")
+@CrossOrigin(origins ="*")
 
 public class PayPalController {
 	@Autowired

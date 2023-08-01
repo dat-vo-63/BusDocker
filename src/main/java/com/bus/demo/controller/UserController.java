@@ -16,7 +16,7 @@ import com.bus.demo.repo.IUser;
 import com.bus.demo.service.ScheduleService;
 import com.bus.demo.service.TicketService;
 @RestController
-@CrossOrigin(value = "*")
+@CrossOrigin(origins ="*")
 public class UserController {
 	@Autowired
 	IBus busRepo;

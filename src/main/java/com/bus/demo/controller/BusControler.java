@@ -43,7 +43,7 @@ import com.bus.demo.service.TicketService;
 
 @RestController
 @RequestMapping()
-@CrossOrigin(value = "*")
+@CrossOrigin(origins ="*")
 public class BusControler {
 	@Autowired
 	IBus busRepo;
